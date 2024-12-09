@@ -13,37 +13,36 @@
 <!-- body -->
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="navbar-brand" href="index.html">
-      <!-- <img  src="img/osu.svg" alt="" width="125" height="25"> -->
-       Home
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a  style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"  class="nav-link" aria-current="page" href="research.html">Research</a>
+<div class="container-fluid col-md-12  col-lg-8"> 
+  <nav class="navbar navbar-expand-sm bg-body-tertiary "">
+    <div class="container-fluid">
+      <a style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"  class="navbar-brand" href="index.html">
+         Sangdong Kim
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"  class="nav-link me-auto" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"  class="nav-link me-auto" aria-current="page" href="research.html">Research</a>
+          </li>
+          </ul>
       </div>
     </div>
-  </div>
-</nav>
-<!-- vertical spacing -->
-<div class="container">
-  <div class="row">
-    <p> <br> </p>
-    </div>
-  </div>
+  </nav>
 <!-- Page Content -->
   <div class="container">
 
-      <div class="row">
+      <div class="row  mt-4">
 
           <!-- Entries Column -->
-          <div class="col-md-8">
+          <div class="col-12 col-sm-6 col-md-8">
             
-            <div style="margin-top:3%; margin-bottom:15%; font-size:medium;">          
+            <div style="margin-bottom:15%; font-size:medium;">          
             <!-- <p><h1 id="research"> Research </h1></p> -->
             
             <p><h4> Work in Progress</h4></p>
@@ -53,15 +52,18 @@
               <p style="text-align: justify;"> <em>Abstract: </em>   </p>
             </li>
 
-            <li class="paper" words="add, your, keywords, here"> <mark><b>"Granular Search in Monopsonistic Labor Market"</mark> </b> <em>  (with <a href="https://www.seanmccrary.com/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank"> Sean McCrary </a>) </em> <a href="slides/granular_search.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Slides</span></a>  
+            <li class="paper" words="add, your, keywords, here"> <mark><b>"Granular Search in Monopsonistic Labor Market"</mark> </b> <em>  (with <a href="https://www.seanmccrary.com/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank"> Sean McCrary </a>) </em> 
+              <a href="slides/granular_search.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Slides</span></a>  
               <p style="text-align: justify;"> <em>Abstract: </em> We develop a model of monopsonistic labor markets with the granular search protocol, &#224; la Jarosch, Nimczik and Sorkin(2024), where the firm size distribution is endogenously determined. We introduce a simple static model to show that the monopsonist’s effective Nash bargaining power is endogenously determined by the firm’s relative size. Monopsonistic firms choose the optimal vacancy postings taking into account the wage determination, ending up with overposting vacancies to suppress wages. We then extend the model to a dynamic model and solve its stationary equilibrium. The dynamic model delivers a rich set of policy implications, including the effect of minimum wage policy on the wage distribution and the effect of competition policy on the labor market equilibrium. Specifically, we show that the increase in wages upon the entry of a new firm is more amplified in the presence of granular search protocol since the new firm’s entry reduces the incumbent firm’s effective bargaining power as well as their employment size.  </p>
             </li>
 
-            <li class="paper" words="add, your, keywords, here"> <mark><b>"Sovereign Partial Default in Continuous Time"</mark> </b> <em>  (with <a href="https://www.gmihalache.com/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank"> Gabriel Mihalache </a> ) </em> <a href="paper/partial_default.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Paper</span></a> 
+            <li class="paper" words="add, your, keywords, here"> <mark><b>"Sovereign Partial Default in Continuous Time"</mark> </b> <em>  (with <a href="https://www.gmihalache.com/" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank"> Gabriel Mihalache </a> ) </em> 
+              <a href="paper/partial_default.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Paper</span></a> 
               <p style="text-align: justify;"> <em>Abstract: </em> We formulate and solve a tractable, continuous time version of the sovereign partial default model of Arellano, Mateos-Planas and R&#237;os-Rull (2023). We compute our model using both traditional continuous time methods and, with an eye towards larger state space applications, on a deep neural network. We show that our formulation allows for a tight characterization of debt and default dynamics, as well as the length and severity of crisis events. </p>
             </li>
 
-            <li class="paper" words="add, your, keywords, here"> <mark><b>"Strategic Demand for Inventors"</mark> </b> <em>  </em> <a href="slides/inventor_demand.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Slides</span></a> 
+            <li class="paper" words="add, your, keywords, here"> <mark><b>"Strategic Demand for Inventors"</mark> </b> <em>  </em> 
+              <a href="slides/inventor_demand.pdf" target="_blank"><span class="badge rounded-pill bg-secondary">Slides</span></a> 
               <p style="text-align: justify;"> <em>Abstract: </em> This paper develops a simple Schumpeterian growth model where firm-level strategic demand for inventors can be described. All firms should produce the latest invention to be the monopolist in output market, and inventor is the only input of innovation. In the model, innovating firms can determine their demands for inventors to strategically deter their competitors’ innovation. Using a tractable model with Stackelberg competition in inventor market, I study the effect frontier firm’s strategic demands on the aggregate growth. Compared to the non-strategic model, frontier firms’ strategic hiring decisions can worse off the aggregate growth and the top income inequality. The mechanism is intensified when fixed cost of R&D is high.<br>
               <em>Presented at: Midwest Macro Spring 2023 (Clemson) </em>  </p>
             </li>
@@ -86,7 +88,8 @@
           </div> 
 
           <!-- Contact Info on the Sidebar -->
-          <div class="col-md-4">
+          <div class="col-6 col-md-4 col-lg-4">
+          <!-- <div class="col"> -->
               <div style="font-family: 'Oswald', sans-serif; font-size: 24px;"><b>Sangdong Kim</b></div><br>
               <p> <b>PhD Candidate in Economics </b><br>
               <b>The Ohio State University</b><br> </p>
