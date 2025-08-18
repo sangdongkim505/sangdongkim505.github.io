@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sangdong Kim - Research</title>
+  <title>Sangdong Kim - Teaching</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/favicon.ico">
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ECFSY04C92"></script>
@@ -85,28 +85,12 @@
         border: none;
         padding-left: 0;
     }
-
-    .paper-item {
-      margin-bottom: 3.5rem;
-    }
-
-    .paper-title {
-      font-family: 'Merriweather', serif;
-      font-size: 1.25rem;
-      color: var(--text-color); 
-      font-weight: 700;
-    }
-
-    .paper-abstract {
-      font-size: 0.9rem;
-      text-align: justify;
-    }
     
-    /* Custom Badge Color */
-    .badge.bg-custom {
-        background-color: var(--link-color) !important;
-        color: white;
+    /* Teaching page list styling */
+    .teaching-list li {
+        margin-bottom: 0.5rem;
     }
+
   </style>
 </head>
 
@@ -121,38 +105,45 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavCentered">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="research.html">Research</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="teaching.html">Teaching</a>
+            <a class="nav-link active" aria-current="page" href="teaching.html">Teaching</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="main-content py-5">
-    <div class="container-fluid">
-      <div class="row align-items-center">
+  <div class="py-5">
+    <div class="row">
+        <div class="col-md-8">
+            
+            <h3 class="mt-5 mb-4">Independent Instructor</h3>
+            <ul class="teaching-list">
+                <li>Intermediate Macroeconomics Theory <em>(2022 Fall, 2023 Fall)</em></li>
+                <li>Principles of Microeconomics <em>(2022 Summer)</em></li>
+            </ul>
 
-        <div class="col-md-7 py-5">
+            <h3 class="mt-5 mb-4">Recitation Leader</h3>
+            <ul class="teaching-list">
+                <li>Macroeconomics Theory 2B (Ph.D., Prof. Lam) <em>(2025 Spring)</em></li>
+                <li>Macroeconomics Theory 1B (Ph.D., Prof. Thomas) <em>(2024 Fall)</em></li>
+                <li>Principles of Microeconomics (Undergraduate, Dr. Buser) <em>(2024 Spring)</em></li>
+            </ul>
 
-            <p class="lead">
-              Welcome! I am a Ph.D. candidate in Economics at The Ohio State University. My job market paper explores the strategic use of high-yield investments by governments in aging economies to address fiscal challenges and ensure long-term sustainability.
-            </p>
-            <div class="mt-5">
-              <h3 class="fs-6 text-uppercase fw-bold text-muted">Research Interests</h3>
-              <p class="interests-list">
-                Macroeconomics, Public Finance, Demographic Transition
-              </p>
-            </div>
-        </div> 
+            <h3 class="mt-5 mb-4">Teaching Award</h3>
+            <ul class="teaching-list">
+                <li>Departmental Graduate Associate Teaching Awards <em>(2025)</em></li>
+            </ul>
 
-        <div class="col-md-5">
-            <div class="contact-card">
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-card" style="position: sticky; top: 2rem;">
                 <h2 class="h4">Sangdong Kim</h2>
                 <p class="text-muted mb-4">
                     Ph.D. Candidate in Economics<br>
@@ -180,12 +171,9 @@
                 </ul>
             </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
-
 </html>
