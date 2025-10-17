@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sangdong Kim - Research</title>
+  <title>Sangdong Kim - Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/favicon.ico">
@@ -107,6 +107,15 @@
         background-color: var(--link-color) !important;
         color: white;
     }
+    
+    /* Updated style for the headshot */
+    .headshot {
+      width: 300px; /* Reduced width */
+      height: 300px; /* Reduced height */
+      object-fit: cover;
+      border-radius: 0%; /* Makes it round */
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 
@@ -136,19 +145,19 @@
 
   <div class="main-content py-5">
     <div class="container-fluid">
-      <div class="row align-items-center">
+      <div class="row align-items-start">
 
-        <div class="col-md-7 py-5">
-
-            <p class="lead">
-              Welcome! I am a Ph.D. candidate in Economics at The Ohio State University. My job market paper explores the strategic use of high-yield investments by governments in aging economies to address fiscal challenges and ensure long-term sustainability.
+        <div class="col-md-7">
+          <img src="img/headshot.png" alt="Sangdong Kim" class="img-fluid headshot mb-4">
+          <p>
+            Welcome! I am a Ph.D. candidate in Economics at The Ohio State University. My job market paper explores the strategic use of high-yield investments by governments in aging economies to address fiscal challenges and ensure long-term sustainability.
+          </p>
+          <div class="mt-5">
+            <h3 class="fs-6 text-uppercase fw-bold text-muted">Research Interests</h3>
+            <p class="interests-list">
+              Macroeconomics, Public Finance, Demographic Transition
             </p>
-            <div class="mt-5">
-              <h3 class="fs-6 text-uppercase fw-bold text-muted">Research Interests</h3>
-              <p class="interests-list">
-                Macroeconomics, Public Finance, Demographic Transition
-              </p>
-            </div>
+          </div>
         </div> 
 
         <div class="col-md-5">
