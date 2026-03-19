@@ -41,18 +41,16 @@
       color: #1a1a1a;
     }
     
-    /* Section Headers (h3) 가독성 개선 스타일 */
     h3 {
       font-family: 'Merriweather', serif;
       font-weight: 700;
       font-size: 1.35rem;
       color: #1a1a1a;
-      letter-spacing: -0.01em; /* Serif체의 단단한 느낌 강조 */
+      letter-spacing: -0.01em;
       margin-bottom: 2rem !important;
       position: relative;
       display: inline-block;
     }
-    /* 헤더 하단에 얇은 포인트 라인 추가 */
     h3::after {
       content: "";
       position: absolute;
@@ -74,7 +72,6 @@
       text-decoration: underline;
     }
 
-    /* Bio Card Styling */
     .bio-card {
       background-color: #f8f9fa;
       padding: 1.5rem 2rem;
@@ -93,7 +90,6 @@
       font-weight: 700;
     }
 
-    /* Section Spacing & Dividers */
     .section-spacing {
       padding-top: 1.5rem; 
       padding-bottom: 1rem;
@@ -103,7 +99,7 @@
       margin-top: 0.5rem;
     }
 
-    /* Paper Item Styling */
+    /* Paper Item Styling - 제목 색상 수정됨 */
     .paper-item {
       margin-bottom: 2.5rem;
     }
@@ -113,9 +109,14 @@
       font-weight: 700;
       display: block;
       margin-bottom: 0.3rem;
-      color: var(--primary-color);
+      color: #1a1a1a; /* 검은색으로 변경 */
       line-height: 1.4;
+      transition: color 0.2s ease;
     }
+    .paper-title:hover {
+      color: var(--primary-color); /* 호버 시에만 포인트 컬러 적용 */
+    }
+
     .paper-meta {
       font-size: 0.92rem;
       color: var(--secondary-color);
@@ -126,7 +127,6 @@
       gap: 0.5rem;
     }
 
-    /* Abstract Styling */
     .paper-abstract {
       font-size: 0.9rem;
       line-height: 1.75;
@@ -161,7 +161,6 @@
       color: var(--secondary-color);
     }
 
-    /* Pre-doctoral Work 섹션 여백 조정 */
     .predoc-spacing {
       margin-top: 3.5rem !important;
     }
