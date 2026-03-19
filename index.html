@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sangdong Kim - Home</title>
+  <title>Sangdong Kim (김상동)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="img/favicon.ico">
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,174 +23,258 @@
 
   <style>
     :root {
-      /* LaTeX darkRed Theme */
-      --primary-color: #6A0025;      /* Main accent color */
-      --link-color: #6A0025;         /* Link color */
-      --link-hover-color: #4B001A;   /* Darker shade for hover */
-      
-      /* Neutral Colors */
+      --primary-color: #6A0025;
       --secondary-color: #6c757d; 
-      --background-color: #f8f9fa;
-      --text-color: #212529; /* Standard dark text color */
+      --background-color: #ffffff;
+      --text-color: #2c3e50;
+      --abstract-bg: #f8f9fa;
     }
-
     body {
       font-family: 'Lato', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
+      line-height: 1.6;
     }
-
-    h1, h2, h3, h4, h5, .navbar-brand {
+    h1, h2, h3, h4 {
       font-family: 'Merriweather', serif;
       font-weight: 700;
-      color: var(--text-color);
+      color: #1a1a1a;
     }
-
-    .navbar {
-      background-color: transparent !important;
-      border-bottom: 1px solid #dee2e6;
-    }
-    
-    .nav-link {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--secondary-color);
-        transition: color 0.2s ease-in-out;
-    }
-
-    .nav-link:hover, .nav-link.active {
-        color: var(--primary-color);
-    }
-
     a {
-      color: var(--link-color);
+      color: var(--primary-color);
       text-decoration: none;
-      transition: color 0.2s ease-in-out;
+      transition: all 0.2s ease;
     }
-
     a:hover {
-      color: var(--link-hover-color);
+      color: #4B001A;
       text-decoration: underline;
     }
-    
-    .contact-card {
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      border: 1px solid #e9ecef;
-    }
-    
-    .contact-card .list-group-item {
-        border: none;
-        padding-left: 0;
-    }
 
-    .paper-item {
-      margin-bottom: 3.5rem;
+    /* Bio Card Styling (왼쪽 테두리 제거 및 배경색 유지) */
+    .bio-card {
+      background-color: #f8f9fa; /* 연회색 배경 */
+      padding: 1.5rem 2rem;
+      border-radius: 4px;
+      /* box-shadow: 0 2px 8px rgba(0,0,0,0.04); 은은한 그림자를 유지하거나 빼실 수 있습니다. */
+      margin: 2rem 0;
+      text-align: left; /* 왼쪽 정렬 */
     }
-
-    .paper-title {
-      font-family: 'Merriweather', serif;
-      font-size: 1.25rem;
-      color: var(--text-color); 
+    .bio-text {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      color: #444;
+      line-height: 1.7;
+    }
+    .bio-text strong {
+      color: var(--primary-color);
       font-weight: 700;
     }
 
+    /* Section Spacing & Dividers */
+    .section-spacing {
+      padding-top: 1.5rem; 
+      padding-bottom: 1rem;
+    }
+    .section-divider {
+      border-top: 1px solid #eeeeee;
+      margin-top: 0.5rem;
+    }
+
+    /* Paper Item Styling */
+    .paper-item {
+      margin-bottom: 2.2rem;
+    }
+    .paper-title {
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.3rem;
+      color: var(--primary-color);
+      line-height: 1.4;
+    }
+    .paper-meta {
+      font-size: 0.92rem;
+      color: var(--secondary-color);
+      margin-bottom: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Abstract Styling */
     .paper-abstract {
       font-size: 0.9rem;
+      line-height: 1.7;
       text-align: justify;
+      background-color: var(--abstract-bg);
+      border: none;
+      border-left: 3px solid #dee2e6;
+      padding: 1.1rem 1.3rem;
+      margin-top: 0.8rem;
+      color: #444;
+      border-radius: 0 4px 4px 0;
     }
     
-    /* Custom Badge Color */
-    .badge.bg-custom {
-        background-color: var(--link-color) !important;
-        color: white;
+    .badge-outline-custom {
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      font-weight: 500;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 0.3em 0.6em;
     }
-    
-    /* Updated style for the headshot */
-    .headshot {
-      width: 300px; /* Reduced width */
-      height: 300px; /* Reduced height */
-      object-fit: cover;
-      border-radius: 0%; /* Makes it round */
-      margin-bottom: 2rem;
+    .badge-outline-custom:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .abstract-toggle {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      color: var(--secondary-color);
     }
   </style>
 </head>
-
 <body>
-<div class="container col-lg-9 col-xl-8"> 
-  <nav class="navbar navbar-expand-sm">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavCentered" aria-controls="navbarNavCentered" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNavCentered">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/research.html">Research</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/teaching.html">Teaching</a>
-          </li>
-        </ul>
-      </div>
+
+<div class="container col-lg-8 col-xl-7 py-5">
+    
+    <div class="header text-center mb-4">
+        <h1 class="display-5">Sangdong Kim (김상동)</h1>
+        <p class="lead mt-3 text-secondary">Ph.D. Candidate in Economics, The Ohio State University</p>
     </div>
-  </nav>
 
-  <div class="main-content py-5">
-    <div class="container-fluid">
-      <div class="row align-items-start">
+    <div class="bio-card">
+        <p class="bio-text">
+          I am a Ph.D. candidate in Economics at <strong>The Ohio State University</strong>, expecting to graduate in Spring 2026. <br>
+          Following my graduation, I will be joining the <strong>Korea Insurance Research Institute (KIRI)</strong> in Seoul as a Research Fellow.
+        </p>
+    </div>
 
-        <div class="col-md-7">
-          <p>
-            Welcome! I am a Ph.D. candidate in Economics at the Ohio State University, expecting to graduate in Spring 2026.
-          </p>
-          <p>
-            I will be joining the Korea Insurance Research Institute (KIRI) in Seoul as a Research Fellow in Spring 2026.
-          </p>
-          <div class="mt-4">
-            <h3 class="fs-6 text-uppercase fw-bold text-muted">Research Interests</h3>
-            <ul>
-              <li>Macroeconomics (International, Labor)</li>
-              <li>Demographic Transition and Pension System</li>
+    <div class="section-divider"></div>
+
+    <div class="row section-spacing">
+        <div class="col-md-7 mb-3">
+            <h3 class="fs-6 text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Research Interests</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1"><i class="bi bi-dot"></i> Macroeconomics (International, Labor)</li>
+              <li><i class="bi bi-dot"></i> Demographic Transition and Pension System</li>
             </ul>
-          </div>
         </div>
-
-        <div class="col-md-5">
-            <div class="contact-card">
-                <h2 class="h4">Sangdong Kim</h2>
-                <p class="text-muted mb-4">
-                    Ph.D. Candidate in Economics<br>
-                    Department of Economics<br>
-                    The Ohio State University
-                </p>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <a href="cv/SKim_CV.pdf" target="_blank">
-                            <i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae (PDF)
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="mailto:kim.7984@osu.edu" target="_blank">
-                            <i class="bi bi-envelope"></i> kim.7984@osu.edu
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-md-5 mb-3">
+            <h3 class="fs-6 text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Contact</h3>
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                    <a href="mailto:kim.7984@osu.edu">
+                        <i class="bi bi-envelope"></i> kim.7984@osu.edu
+                    </a>
+                </li>
+                <li>
+                    <a href="cv/SKim_CV.pdf" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae (PDF)
+                    </a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-  </div>
+    
+    <div class="section-divider"></div>
+
+    <div class="research-section section-spacing">
+        <h3 class="mb-4">Work in Progress</h3>
+        <ul class="list-unstyled">
+            
+            <li class="paper-item">
+                <span class="paper-title">"Public Debt and Foreign Investment in Aging Developed Economies"</span>
+                <div class="paper-meta">
+                    <span class="text-muted">Job Market Paper</span>
+                    <span class="mx-1 text-muted">|</span>
+                    <a href="https://drive.google.com/file/d/1i9t6unoizJ1S_R8b94ZoKFiD3yKaRSpZ/view?usp=sharing" target="_blank" class="badge rounded-pill badge-outline-custom">Paper</a>
+                    <a class="abstract-toggle ms-1" data-bs-toggle="collapse" href="#abstract1" role="button">Abstract</a>
+                </div>
+                <div class="collapse" id="abstract1">
+                    <div class="card card-body paper-abstract">
+                        I evaluate a strategy for managing public debt by issuing additional domestic bonds, with yields depressed by population aging and demographic transition, to fund higher-return foreign asset accumulation. I develop an overlapping-generations model with incomplete markets and a rich fiscal structure to analyze the strategy's implications for debt sustainability, macroeconomic outcomes, and welfare. I calibrate the model to the experience of Japan since the mid-1990s. I identify an intertemporal trade-off. In the short run, the policy requires significant increase in debt-to-GDP ratio, which crowds out investment and depresses wages and growth. However, the long-term accumulation of high-yielding foreign assets improves the fiscal outlook, leading to a lower eventual debt-to-GDP ratio and greater capital deepening. The Japanese government's strategy was welfare-improving from a utilitarian perspective with unequal impacts across cohorts. Finally, I show that investing abroad can relax the well-known $r < g$ condition for public debt sustainability.
+                    </div>
+                </div>
+            </li>
+
+            <li class="paper-item">
+                <span class="paper-title">"Granular Search in Monopsonistic Labor Market"</span>
+                <div class="paper-meta">
+                    <span>with <a href="https://www.seanmccrary.com/" target="_blank">Sean McCrary</a></span>
+                    <span class="mx-1 text-muted">|</span>
+                    <span class="text-muted italic">Draft coming soon!</span>
+                    <a class="abstract-toggle ms-2" data-bs-toggle="collapse" href="#abstract2">Abstract</a>
+                </div>
+                <div class="collapse" id="abstract2">
+                    <div class="card card-body paper-abstract">
+                        We develop a model of monopsonistic labor markets with the granular search protocol, à la Jarosch, Nimczik and Sorkin (2024), where the firm size distribution is endogenously determined. We introduce a simple static model to show that the monopsonist’s effective Nash bargaining power is endogenously determined by the firm’s relative size. Monopsonistic firms choose the optimal vacancy postings taking into account the wage determination, ending up with overposting vacancies to suppress wages.
+                    </div>
+                </div>
+            </li>
+
+            <li class="paper-item">
+                <span class="paper-title">"Sovereign Partial Default in Continuous Time"</span>
+                <div class="paper-meta">
+                    <span>with <a href="https://www.gmihalache.com/" target="_blank">Gabriel Mihalache</a></span>
+                    <span class="mx-1 text-muted">|</span>
+                    <a href="https://drive.google.com/file/d/1bfXP2wdqxDvZolEa2YKrkxkQWs_dsWMs/view?usp=drive_link" target="_blank" class="badge rounded-pill badge-outline-custom">Paper</a>
+                    <a class="abstract-toggle ms-2" data-bs-toggle="collapse" href="#abstract3">Abstract</a>
+                </div>
+                <div class="collapse" id="abstract3">
+                    <div class="card card-body paper-abstract">
+                        We formulate and solve a tractable, continuous time version of the sovereign partial default model of Arellano, Mateos-Planas and Ríos-Rull (2023). We compute our model using both traditional continuous time methods and, with an eye towards larger state space applications, on a deep neural network. We show that our formulation allows for a tight characterization of debt and default dynamics, as well as the length and severity of crisis events.
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h3 class="mt-4 mb-4">Pre-doctoral Work</h3>
+        <ul class="list-unstyled">
+            
+            <li class="paper-item">
+                <span class="paper-title">"The impact of international patenting on corporate patenting activities: Evidence from Korea"</span>
+                <div class="paper-meta">
+                    <span>with <a href="https://sites.google.com/site/jihong33/" target="_blank">Jihong Lee</a></span>
+                    <span class="mx-1 text-muted">|</span>
+                    <span class="fw-bold">Technovation</span>, 130, 2024
+                    <a class="abstract-toggle ms-2" data-bs-toggle="collapse" href="#abstract5">Abstract</a>
+                </div>
+                <div class="collapse" id="abstract5">
+                    <div class="card card-body paper-abstract">
+                        This paper studies the impact of international patenting on corporate patenting activities, using a novel firm-level dataset from Korea. After making an overseas patent application for the first time, firms increase their overall patenting activity, both domestically and internationally, relative to similar firms that operate only in the domestic market for ideas.
+                    </div>
+                </div>
+            </li>
+
+            <li class="paper-item">
+                <span class="paper-title">"Korea Patent Data Project (KoPDP): Contents and Methods"</span>
+                <div class="paper-meta">
+                    <span>with <a href="https://sites.google.com/site/jihong33/" target="_blank">Jihong Lee</a>, Hyunkyeong Lim, Keunsang Song and Jae Yu Jung</span>
+                    <span class="mx-1 text-muted">|</span>
+                    <span class="fw-bold">The Korean Economic Forum</span>, 2020
+                    <a class="abstract-toggle ms-2" data-bs-toggle="collapse" href="#abstract6">Abstract</a>
+                </div>
+                <div class="collapse" id="abstract6">
+                    <div class="card card-body paper-abstract">
+                        In this paper, we describe the contents and methods of “Korea Patent Data Project (KoPDP)”. The project collects all utility patents granted from the Korea Intellectual Property Office (KIPO) for the period 1948-2016 and the US Patent and Trademark Office (USPTO) for the period 1976-2017.
+                        <div class="mt-2">
+                            <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/AUYERV" target="_blank" class="small"><i class="bi bi-database"></i> Replication Data (Harvard Dataverse)</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
 </html>
