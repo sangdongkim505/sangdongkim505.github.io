@@ -35,11 +35,35 @@
       color: var(--text-color);
       line-height: 1.6;
     }
-    h1, h2, h3, h4 {
+    h1, h2, h4 {
       font-family: 'Merriweather', serif;
       font-weight: 700;
       color: #1a1a1a;
     }
+    
+    /* Section Headers (h3) 가독성 개선 스타일 */
+    h3 {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: #1a1a1a;
+      letter-spacing: -0.01em; /* Serif체의 단단한 느낌 강조 */
+      margin-bottom: 2rem !important;
+      position: relative;
+      display: inline-block;
+    }
+    /* 헤더 하단에 얇은 포인트 라인 추가 */
+    h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 35px;
+      height: 2px;
+      background-color: var(--primary-color);
+      opacity: 0.7;
+    }
+
     a {
       color: var(--primary-color);
       text-decoration: none;
@@ -50,14 +74,13 @@
       text-decoration: underline;
     }
 
-    /* Bio Card Styling (왼쪽 테두리 제거 및 배경색 유지) */
+    /* Bio Card Styling */
     .bio-card {
-      background-color: #f8f9fa; /* 연회색 배경 */
+      background-color: #f8f9fa;
       padding: 1.5rem 2rem;
       border-radius: 4px;
-      /* box-shadow: 0 2px 8px rgba(0,0,0,0.04); 은은한 그림자를 유지하거나 빼실 수 있습니다. */
       margin: 2rem 0;
-      text-align: left; /* 왼쪽 정렬 */
+      text-align: left;
     }
     .bio-text {
       font-size: 1.1rem;
@@ -82,7 +105,7 @@
 
     /* Paper Item Styling */
     .paper-item {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2.5rem;
     }
     .paper-title {
       font-family: 'Merriweather', serif;
@@ -106,12 +129,12 @@
     /* Abstract Styling */
     .paper-abstract {
       font-size: 0.9rem;
-      line-height: 1.7;
+      line-height: 1.75;
       text-align: justify;
       background-color: var(--abstract-bg);
       border: none;
       border-left: 3px solid #dee2e6;
-      padding: 1.1rem 1.3rem;
+      padding: 1.1rem 1.4rem;
       margin-top: 0.8rem;
       color: #444;
       border-radius: 0 4px 4px 0;
@@ -136,6 +159,11 @@
       letter-spacing: 0.5px;
       cursor: pointer;
       color: var(--secondary-color);
+    }
+
+    /* Pre-doctoral Work 섹션 여백 조정 */
+    .predoc-spacing {
+      margin-top: 3.5rem !important;
     }
   </style>
 </head>
@@ -236,7 +264,7 @@
 
         <div class="section-divider"></div>
 
-        <h3 class="mt-4 mb-4">Pre-doctoral Work</h3>
+        <h3 class="predoc-spacing mb-4">Pre-doctoral Work</h3>
         <ul class="list-unstyled">
             
             <li class="paper-item">
