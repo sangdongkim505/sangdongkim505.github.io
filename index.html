@@ -322,8 +322,18 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Pause an embedded video when its panel is collapsed
+  // Play an embedded video when its panel opens; pause it when the panel closes.
+  // "show" fires inside the click, so browsers allow playback with sound.
+  // If a browser still blocks it, fall back to muted playback.
   document.querySelectorAll('.collapse').forEach(function (panel) {
+    panel.addEventListener('show.bs.collapse', function () {
+      panel.querySelectorAll('video').forEach(function (v) {
+        var p = v.play();
+        if (p && p.catch) {
+          p.catch(function () { v.muted = true; v.play().catch(function () {}); });
+        }
+      });
+    });
     panel.addEventListener('hide.bs.collapse', function () {
       panel.querySelectorAll('video').forEach(function (v) { v.pause(); });
     });
